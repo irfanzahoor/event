@@ -1,0 +1,38 @@
+{% extends "templates/web_custom.html"%} {% block content %}
+<!-- =======  F.A.Q Section ======= -->
+<section id="faq">
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>{{ q.title }}</h2>
+      </div>
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        {% for record in q.faq_child %}
+
+        <div class="col-lg-9">
+
+          <ul class="faq-list">
+
+            <li>
+              <div data-bs-toggle="collapse" class="collapsed question" href="#faq1"><b>{{ record.idx }} - {{ record.question }}</b>
+                <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                    {{ record.idx }} - {{ record.answer }}
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </section><!-- End  F.A.Q Section -->
+
+ 
+ {% endblock %}

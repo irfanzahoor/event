@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-25 15:17:17.641747",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "standard_access",
+  "pro_access",
+  "premium_access"
+ ],
+ "fields": [
+  {
+   "fieldname": "standard_access",
+   "fieldtype": "Float",
+   "label": "Standard Access"
+  },
+  {
+   "fieldname": "pro_access",
+   "fieldtype": "Float",
+   "label": "Pro Access"
+  },
+  {
+   "fieldname": "premium_access",
+   "fieldtype": "Float",
+   "label": "Premium Access"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-25 15:17:17.641747",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "Ticket",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

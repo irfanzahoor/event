@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-22 01:09:26.677577",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "organizer_id",
+  "organizer_name",
+  "phone",
+  "email",
+  "from_date",
+  "column_break_m1ony",
+  "type_of_organizer",
+  "event_history",
+  "event_categories",
+  "to_date",
+  "section_break_dyejd",
+  "description",
+  "agreement",
+  "column_break_66bhn",
+  "budgeting_information",
+  "insurance_information",
+  "section_break_eicbl",
+  "permissions_and_access",
+  "custom_fields"
+ ],
+ "fields": [
+  {
+   "fieldname": "organizer_id",
+   "fieldtype": "Autocomplete",
+   "label": "Organizer ID"
+  },
+  {
+   "fieldname": "organizer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Organizer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Int",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_organizer",
+   "fieldtype": "Data",
+   "label": "Type of Organizer"
+  },
+  {
+   "fieldname": "event_history",
+   "fieldtype": "Small Text",
+   "label": "Event History"
+  },
+  {
+   "fieldname": "event_categories",
+   "fieldtype": "Data",
+   "label": "Event Categories"
+  },
+  {
+   "fieldname": "section_break_dyejd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "agreement",
+   "fieldtype": "Small Text",
+   "label": "Agreement"
+  },
+  {
+   "fieldname": "column_break_66bhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budgeting_information",
+   "fieldtype": "Small Text",
+   "label": "Budgeting Information"
+  },
+  {
+   "fieldname": "insurance_information",
+   "fieldtype": "Small Text",
+   "label": "Insurance Information"
+  },
+  {
+   "fieldname": "section_break_eicbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "permissions_and_access",
+   "fieldtype": "Small Text",
+   "label": "Permissions and Access"
+  },
+  {
+   "fieldname": "custom_fields",
+   "fieldtype": "Small Text",
+   "label": "Custom Fields"
+  },
+  {
+   "fieldname": "column_break_m1ony",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Data",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Data",
+   "label": "To Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-23 21:35:54.700549",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "Event Organizer",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,70 @@
+{% extends "templates/web_custom.html"%}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="myForm" style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f8f8; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+    <label for="">First Name</label>
+    <input type="text" name="first_name" id="fname">
+    <br><br>
+    <label for="">Last Name</label>
+    <input type="text" name="last_name" id="lname">
+    <br><br>
+    <label for="">Full Name</label>
+    <input type="text" name="full_name" id="fullname">
+    <label for="">Mobile</label>
+    <input type="number" name="mobile" id="mobile">
+    <br><br>
+
+    <table style="width: 100%; border-collapse: collapse; border: 2px solid #333; margin-top: 20px;">
+        <tr>
+            <th style="background-color: #333; color: #fff; border: 1px solid #333; padding: 10px; text-align: left;">Question</th>
+            <th style="background-color: #333; color: #fff; border: 1px solid #333; padding: 10px; text-align: left;">Answer</th>
+        </tr>
+    </table>
+    <button type="button"  onclick="send_data()" style="background-color: #333; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; float: right;" >Submit</button>
+</form>
+
+</body>
+
+</html>
+
+<script>
+
+function send_data(){
+    let fname = document.getElementById('fname').value
+    let lname = document.getElementById('lname').value
+    let fullname = document.getElementById('fullname').value
+    let phone = document.getElementById('mobile').value
+
+
+		// Make an asynchronous call to a server-side function
+		frappe.call({
+			method: 'event.events.front.front_data',
+			args: {
+				fname,lname,fullname,phone
+			},
+			callback: function (r) {
+				// Handle the response here
+				if (r.message) {
+					// You can do something with the response data if needed
+					console.log(r.message);
+				}
+			},
+			error: function (err) {
+				// Handle errors here
+				console.error(err);
+			}
+		});
+	}
+</script>
+
+{% endblock %}

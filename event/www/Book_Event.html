@@ -1,0 +1,105 @@
+{% extends "templates/web_custom.html"%}
+
+{% block content %}
+
+<form class="row g-2 mt-5 mb-5" id="img">
+  <div class="col-6">
+    <label for="inputName" class="form-label" required>Name : </label>
+    <input type="text" class="form-control" id="name" />
+  </div>
+  <div class="col-6">
+    <label for="inputAddress2" class="form-label" required>Address </label>
+    <input type="text" class="form-control" id="address" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label" required>City</label>
+    <input type="text" class="form-control" id="city" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputState" class="form-label" required>State</label>
+    <select id="state" class="form-select">
+      <option>Choose</option>
+      <option>Balochistan</option>
+      <option>Khyber Pakhtunkhwa </option>
+      <option>Punjab</option>
+      <option>Sind</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label" required>From Date</label>
+    <input type="datetime-local" class="form-control" id="fromdate" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label" required>To Date</label>
+    <input type="datetime-local" class="form-control" id="todate" />
+  </div>
+  <div class="col-6">
+    <label for="" class="form-label" required>Event Name : </label>
+    <input type="text" class="form-control" id="eventname" placeholder="" />
+  </div>
+  <div class="col-6">
+    <label for="inputAddress2" class="form-label" required>Total Tickets</label>
+    <input type="text" class="form-control" id="ticket" />
+  </div>
+  <div class="input-group mb-3">
+    <input type="file" class="form-control" id="upload" />
+    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label" required>Email</label>
+    <input type="email" class="form-control" id="email" />
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" />
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" />
+      <label class="form-check-label" for="gridCheck"> Check me out </label>
+    </div>
+  </div>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <button type="button" onclick="send_data()" class="btn btn-primary me-md-2">Sign in</button>
+  </div>
+</form>
+
+
+<script>
+
+  function send_data() {
+    let name = document.getElementById('name').value
+    let address = document.getElementById('address').value
+    let city = document.getElementById('city').value
+    let state = document.getElementById('state').value
+    let fromdate = document.getElementById('fromdate').value
+    let todate = document.getElementById('todate').value
+    let eventname = document.getElementById('eventname').value
+    let ticket = document.getElementById('ticket').value
+    let upload = document.getElementById('upload').value
+    let email = document.getElementById('email').value
+    let password = document.getElementById('password').value
+
+    
+
+    // Make an asynchronous call to a server-side function
+    frappe.call({
+      method: 'event.events.Event_Book.book_data',
+      args: {
+              name , address , city , state , fromdate , todate , eventname , ticket , upload , email , password
+      },
+      callback: function (r) {
+        // Handle the response here
+        if (r.message) {
+          // You can do something with the response data if needed
+          console.log(r.message);
+        }
+      },
+      error: function (err) {
+        // Handle errors here
+        console.error(err);
+      }
+    });
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "templates/web_custom.html"%}
+
+{% block content %}
+
+<form class="row g-2 mt-4 mb-4 bg-gray-200">
+    <div class="col-6">
+        <label for="" class="form-label" required>Organizer ID : </label>
+        <input type="number" class="form-control" id="organizer-id" />
+    </div>
+    <div class="col-6">
+        <label for="" class="form-label" required>Organizer Name: </label>
+        <input type="text" class="form-control" id="organizer-name" />
+    </div>
+    <div class="col-6">
+        <label for="" class="form-label" required>Phone : </label>
+        <input type="tel" class="form-control" id="Phone" />
+    </div>
+    <div class="col-6">
+        <label for="" class="form-label" required>Email : </label>
+        <input type="email" class="form-control" id="email" />
+    </div>
+    <div class="col-md-6">
+        <label for="" class="form-label" required>Event History :</label>
+        <input type="text" class="form-control" id="event-history" />
+    </div>
+    <div class="col-md-6">
+        <label for="" class="form-label" required>From Date</label>
+        <input type="datetime-local" class="form-control" id="fromdate" />
+    </div>
+    <div class="col-md-6">
+        <label for="" class="form-label" required>To Date</label>
+        <input type="datetime-local" class="form-control" id="todate" />
+    </div>
+    <div class="col-md-6">
+        <label for="" class="form-label" required>Type of Organizer</label>
+        <select id="organizer-type" class="form-select">
+            <option>Choose</option>
+            <option>Corporate Event</option>
+            <option>Wedding Event</option>
+            <option>Event Marketer</option>
+            <option>Social Event</option>
+            <option>Non-Profit Event</option>
+            <option>Virtual Event</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="" class="form-label" required>Event Categories</label>
+        <select id="event-category" class="form-select">
+            <option>Choose</option>
+            <option>Conference</option>
+            <option>Trade show</option>
+            <option>Networking</option>
+            <option>Workshop</option>
+            <option>Team building</option>
+            <option>Product launch</option>
+            <option>Charity </option>
+            <option>Internal corporate </option>
+        </select>
+    </div>
+
+    <div class="form-outline w-50 mb-4">
+        <label class="form-label" for="">Budgeting Information</label>
+        <textarea type="text" class="form-control" id="Budget" rows="3"></textarea>
+    </div>
+
+    <div class="form-outline w-50 mb-4">
+        <label class="form-label" for="">Insurance Information</label>
+        <textarea type="text" class="form-control" id="insurance" rows="3"></textarea>
+    </div>
+
+    <div class="form-outline w-50 mb-4">
+        <label class="form-label" for="">Agreement : </label>
+        <textarea type="text" class="form-control" id="agreement" rows="3"></textarea>
+    </div>
+
+    <div class="form-outline w-50 mb-4">
+        <label class="form-label" for="">Description : </label>
+        <textarea type="text" class="form-control" id="description" rows="3"></textarea>
+    </div>
+
+
+    <div class="form-outline w-50 mb-4">
+        <label class="form-label" for="">Permissions and Access : </label>
+        <textarea type="text" class="form-control" id="permission" rows="3"></textarea>
+    </div>
+
+    <div class="form-outline  mb-4">
+        <label class="form-label" for="">Custom Data : </label>
+        <textarea type="text" class="form-control" id="custom" rows="3"></textarea>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" onclick="send_data()" class="btn btn-primary me-md-2">Save</button>
+    </div>
+</form>
+
+
+<script>
+
+    function send_data() {
+        let organizerid = document.getElementById('organizer-id').value
+        let organizername = document.getElementById('organizer-name').value
+        let Phone = document.getElementById('Phone').value
+        let email = document.getElementById('email').value
+        let eventhistory = document.getElementById('event-history').value
+        let fromdate = document.getElementById('fromdate').value
+        let todate = document.getElementById('todate').value
+        let organizertype = document.getElementById('organizer-type').value
+        let eventcategory = document.getElementById('event-category').value
+        let Budget = document.getElementById('Budget').value
+        let insurance = document.getElementById('insurance').value
+        let agreement = document.getElementById('agreement').value
+        let description = document.getElementById('description').value
+        let permission = document.getElementById('permission').value
+        let custom = document.getElementById('custom').value
+
+
+
+
+        // Make an asynchronous call to a server-side function
+        frappe.call({
+            method: 'event.events.Organizer.book_data',
+            args: {
+                organizerid, organizername, Phone, email, eventhistory, fromdate, todate, organizertype, Budget, insurance, agreement, description, permission, custom
+            },
+            callback: function (r) {
+                // Handle the response here
+                if (r.message) {
+                    // You can do something with the response data if needed
+                    console.log(r.message);
+                }
+            },
+            error: function (err) {
+                // Handle errors here
+                console.error(err);
+            }
+        });
+    }
+</script>
+{% endblock %}

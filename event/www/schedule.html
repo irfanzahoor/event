@@ -1,0 +1,157 @@
+{% extends "templates/web_custom.html"%} {% block content %}
+
+<!-- ======= Schedule Section ======= -->
+<section id="schedule" class="section-with-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+      <h2>Event Schedule</h2>
+      <p>Here is our event schedule</p>
+    </div>
+
+    <ul
+      class="nav nav-tabs"
+      role="tablist"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <li class="nav-item">
+        <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab"
+          >Day 1</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab"
+          >Day 2</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab"
+          >Day 3</a
+        >
+      </li>
+    </ul>
+
+    <h3 class="sub-heading">
+      Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet
+      officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.
+    </h3>
+
+    <div
+      class="tab-content row justify-content-center"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <!-- Schdule Day 1 -->
+      <div
+        role="tabpanel"
+        class="col-lg-9 tab-pane fade show active"
+        id="day-1"
+      >
+        <div class="row schedule-item">
+          <div class="col-md-2"><time>09:30 AM</time></div>
+          <div class="col-md-10">
+            <h4>Registration</h4>
+            <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+          </div>
+        </div>
+
+        {% for item in doc %}
+        <div class="row schedule-item">
+          <div class="col-md-12">
+            <div class="speaker">
+              <img src="{{item.image}}" alt="" />
+              <!-- <img src="/assets/event/img/speakers/1.jpg" alt="Brenden Legros"> -->
+            </div>
+            <h4><span>{{ item.session_name }}</span></h4>
+            <p>{{item.session_description}}</p>
+          </div>
+          <br />
+          <div class="col-md-2"><time>{{item.start_time}}</time></div>
+          <div class="col-md-1"><i>To</i></div>
+          <div class="col-md-2"><time>{{ item.end_time }}</time></div>
+        </div>
+        {% endfor %}
+
+       
+      </div>
+      <!-- End Schdule Day 1 -->
+
+      <!-- Schdule Day 2 -->
+      <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+        <div
+        role="tabpanel"
+        class="col-lg-9 tab-pane fade show active"
+        id="day-1"
+      >
+        <div class="row schedule-item">
+          <div class="col-md-2"><time>09:30 AM</time></div>
+          <div class="col-md-10">
+            <h4>Registration</h4>
+            <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+          </div>
+        </div>
+
+        {% for item in doc %}
+        <div class="row schedule-item">
+          <div class="col-md-12">
+            <div class="speaker">
+              <img src="{{item.image}}" alt="" />
+              <!-- <img src="/assets/event/img/speakers/1.jpg" alt="Brenden Legros"> -->
+            </div>
+            <h4><span>{{ item.session_name }}</span></h4>
+            <p>{{item.session_description}}</p>
+          </div>
+          <br />
+          <div class="col-md-2"><time>{{item.start_time}}</time></div>
+          <div class="col-md-1"><i>To</i></div>
+          <div class="col-md-2"><time>{{ item.end_time }}</time></div>
+        </div>
+        {% endfor %}
+
+       
+      </div>
+      </div>
+      <!-- End Schdule Day 2 -->
+
+      <!-- Schdule Day 3 -->
+      <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3">
+        <div
+        role="tabpanel"
+        class="col-lg-9 tab-pane fade show active"
+        id="day-1"
+      >
+        <div class="row schedule-item">
+          <div class="col-md-2"><time>09:30 AM</time></div>
+          <div class="col-md-10">
+            <h4>Registration</h4>
+            <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+          </div>
+        </div>
+
+        {% for item in doc %}
+        <div class="row schedule-item">
+          <div class="col-md-12">
+            <div class="speaker">
+              <img src="{{item.image}}" alt="" />
+              <!-- <img src="/assets/event/img/speakers/1.jpg" alt="Brenden Legros"> -->
+            </div>
+            <h4><span>{{ item.session_name }}</span></h4>
+            <p>{{item.session_description}}</p>
+          </div>
+          <br />
+          <div class="col-md-2"><time>{{item.start_time}}</time></div>
+          <div class="col-md-1"><i>To</i></div>
+          <div class="col-md-2"><time>{{ item.end_time }}</time></div>
+        </div>
+        {% endfor %}
+
+       
+      </div>
+      </div>
+      <!-- End Schdule Day 3 -->
+    </div>
+  </div>
+</section>
+<!-- End Schedule Section -->
+
+{% endblock %}

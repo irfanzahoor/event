@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- "Practice" record ka title display karein -->
+<h1>{{ q.title }}</h1>
+
+<!-- "practice_child" ke har record ke liye loop start karein -->
+{% for record in q.practice_child %}
+    <p>
+        <!-- Record ke "idx" aur "question" fields ki values bold text mein display karein -->
+        <b>{{ record.idx }} - {{ record.question }}</b>
+        <br>
+        <!-- Record ke "idx" aur "answer" fields ki values display karein -->
+        {{ record.idx }} - {{ record.answer }}
+    </p>
+{% endfor %}
+<!-- Loop khatam -->
+
+
+</body>
+</html>

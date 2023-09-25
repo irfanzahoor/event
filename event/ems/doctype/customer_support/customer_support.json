@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-26 02:46:57.033191",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_id",
+  "ticket_holder",
+  "contact_info",
+  "column_break_yzty9",
+  "payment_info",
+  "ticket_status",
+  "refund_policy",
+  "section_break_u8x2d",
+  "ticket_terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_id",
+   "fieldtype": "Int",
+   "label": "Ticket ID"
+  },
+  {
+   "fieldname": "ticket_holder",
+   "fieldtype": "Data",
+   "label": "Ticket Holder"
+  },
+  {
+   "fieldname": "contact_info",
+   "fieldtype": "Data",
+   "label": "Contact Info"
+  },
+  {
+   "fieldname": "column_break_yzty9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_info",
+   "fieldtype": "Data",
+   "label": "Payment Info"
+  },
+  {
+   "fieldname": "ticket_status",
+   "fieldtype": "Data",
+   "label": "Ticket Status"
+  },
+  {
+   "fieldname": "refund_policy",
+   "fieldtype": "Data",
+   "label": "Refund Policy"
+  },
+  {
+   "fieldname": "section_break_u8x2d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ticket_terms",
+   "fieldtype": "Data",
+   "label": "Ticket Terms"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-26 02:46:57.033191",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "Customer Support",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

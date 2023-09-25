@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-21 02:02:57.453117",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "answer"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question"
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Answer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-09-21 02:11:16.733489",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "FAQ Child",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

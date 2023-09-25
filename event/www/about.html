@@ -1,0 +1,25 @@
+{% extends "templates/web_custom.html"%}
+
+{% block content %}
+
+ <!-- ======= About Section ======= -->
+<section id="about">
+    <div class="container position-relative" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>About The Event</h2>
+          <p>{{ test.about_event }}</p>
+        </div>
+        <div class="col-lg-3">
+          <h3>Where</h3>
+          <p>{{ test.where }}</p>
+        </div>
+        <div class="col-lg-3">
+          <h3>When</h3>
+          <p>{{ test.when }}</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
+
+{% endblock %}

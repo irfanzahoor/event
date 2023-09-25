@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-26 02:42:43.365766",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_id",
+  "ticket_price",
+  "quantity",
+  "payment_info",
+  "order_number",
+  "ticket_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_id",
+   "fieldtype": "Int",
+   "label": "Ticket ID"
+  },
+  {
+   "fieldname": "ticket_price",
+   "fieldtype": "Float",
+   "label": "Ticket Price"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "payment_info",
+   "fieldtype": "Data",
+   "label": "Payment Info"
+  },
+  {
+   "fieldname": "order_number",
+   "fieldtype": "Data",
+   "label": "Order Number"
+  },
+  {
+   "fieldname": "ticket_status",
+   "fieldtype": "Data",
+   "label": "Ticket Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-26 02:42:43.365766",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "Financial",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

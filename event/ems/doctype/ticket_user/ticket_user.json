@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-26 02:31:04.208414",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket_id",
+  "event_name",
+  "date_and_time",
+  "venue",
+  "column_break_qpix9",
+  "ticket_type",
+  "seatsection",
+  "quantity",
+  "ticket_holder_name",
+  "contact_information_section",
+  "email",
+  "column_break_opv9a",
+  "mobile",
+  "section_break_gn9de",
+  "payment_information",
+  "order_number",
+  "ticket_status",
+  "column_break_b1n42",
+  "order_date",
+  "access_control",
+  "notification"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket_id",
+   "fieldtype": "Int",
+   "label": "Ticket ID"
+  },
+  {
+   "fieldname": "event_name",
+   "fieldtype": "Data",
+   "label": "Event Name"
+  },
+  {
+   "fieldname": "date_and_time",
+   "fieldtype": "Data",
+   "label": "Date and Time"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue"
+  },
+  {
+   "fieldname": "column_break_qpix9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Data",
+   "label": "Ticket Type"
+  },
+  {
+   "fieldname": "seatsection",
+   "fieldtype": "Data",
+   "label": "Seat/Section"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "ticket_holder_name",
+   "fieldtype": "Data",
+   "label": "Ticket Holder Name"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "section_break_gn9de",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_information",
+   "fieldtype": "Data",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "order_number",
+   "fieldtype": "Data",
+   "label": "Order Number"
+  },
+  {
+   "fieldname": "ticket_status",
+   "fieldtype": "Data",
+   "label": "Ticket Status"
+  },
+  {
+   "fieldname": "column_break_b1n42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fieldname": "access_control",
+   "fieldtype": "Data",
+   "label": "Access Control"
+  },
+  {
+   "fieldname": "notification",
+   "fieldtype": "Data",
+   "label": "Notification"
+  },
+  {
+   "fieldname": "column_break_opv9a",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-26 02:31:55.305661",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "Ticket User",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

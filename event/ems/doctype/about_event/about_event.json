@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-21 00:53:08.280957",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "about_event",
+  "where",
+  "when"
+ ],
+ "fields": [
+  {
+   "fieldname": "about_event",
+   "fieldtype": "Text",
+   "label": "About Event"
+  },
+  {
+   "fieldname": "where",
+   "fieldtype": "Data",
+   "label": "Where"
+  },
+  {
+   "fieldname": "when",
+   "fieldtype": "Datetime",
+   "label": "When"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-21 00:54:11.292439",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "About Event",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

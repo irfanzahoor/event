@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-09-21 02:04:37.613578",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "faq_child"
+ ],
+ "fields": [
+  {
+   "fieldname": "faq_child",
+   "fieldtype": "Table",
+   "label": "FAQ Child",
+   "options": "FAQ Child"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-09-21 02:14:09.732683",
+ "modified_by": "Administrator",
+ "module": "EMS",
+ "name": "FAQ",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
