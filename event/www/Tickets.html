@@ -8,7 +8,7 @@
 
       <div class="section-header">
         <h2>Buy Tickets</h2>
-        <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
+        <h5 class="text-uppercase text-center"><span>Remaining Tickets  : </span>  {{ticket.remaining_tickets}}</h5>
       </div>
 
       <div class="row">
@@ -91,14 +91,50 @@
           </div>
           <div class="modal-body">
             <form method="POST" action="#">
-              <div class="form-group">
-                <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+              <!-- <div class="form-group col-lg-12">
+                <input type="number" class="form-control" name="ticket_id" id="ticket_id" placeholder="Ticket Id:">
+              </div> -->
+              <div class="form-group mt-3"  >
+                <input type="text" class="form-control" name="event_name" id="event_name" placeholder="Event Name">
+              </div>
+              <div class="form-group mt-2">
+                <input type="datetime-local" class="form-control" name="date_and_time" id="date_and_time" placeholder="Date and Time">
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                <input type="text" class="form-control" name="venue" id="vanue" placeholder="Venue">
               </div>
               <div class="form-group mt-3">
-                <select id="ticket-type" name="ticket-type" class="form-select">
+                <input type="text" class="form-control" name="seat/section" id="seatsection" placeholder="Seat/Section">
+              </div>
+              <div class="form-group mt-2">
+                <input type="number" class="form-control" name="quantity" id="quantity" placeholder="Quantity">
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="ticket_holder_name" id="ticket_holder_name" placeholder="Ticket Holder Name">
+              </div>
+              <div class="form-group mt-2">
+                <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Mobile">
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="email" id="email" placeholder="Your Email">
+              </div>
+              
+                <div class="form-group mt-3">
+                  <select id="ticket-type" id="payment-information" name="ticket-type" class="form-select">
+                    <option value="">-- Select Your Payment Method --</option>
+                    <option value="cash">Cash</option>
+                    <option value="check">Check</option>
+                    <option value="credit">Credit Card</option>
+                    <option value="debit card">Debit Card</option>
+                    <option value="digital-currency">Digital Currency</option>
+                  </select>
+                </div>
+              <div class="form-group mt-2">
+                <input type="datetime-local" class="form-control" name="order_date" id="order_date" placeholder="Order Date">
+              </div>
+              
+              <div  class="form-group mt-3">
+                <select  id="ticket-type" name="ticket-type"  class="form-select">
                   <option value="">-- Select Your Ticket Type --</option>
                   <option value="standard-access">Standard Access</option>
                   <option value="pro-access">Pro Access</option>
@@ -106,7 +142,7 @@
                 </select>
               </div>
               <div class="text-center mt-3">
-                <button type="submit" class="btn">Buy Now</button>
+                <button type="button" onclick="send_data()" class="btn">Buy Now</button>
               </div>
             </form>
           </div>
@@ -115,5 +151,45 @@
     </div><!-- /.modal -->
 
   </section><!-- End Buy Ticket Section -->
+
+
+
+  <script>
+
+    function send_data() {
+      // let TicketId = document.getElementById('ticket_id').value
+      let EventName = document.getElementById('event_name').value
+      let Date = document.getElementById('date_and_time').value
+      let vanue = document.getElementById('vanue').value
+      // let TicketStatus = document.getElementById('ticket-status').value
+      let Section = document.getElementById('seatsection').value
+      let Quantity = document.getElementById('quantity').value
+      let username = document.getElementById('ticket_holder_name').value
+      let Mobile = document.getElementById('mobile').value
+      let Email = document.getElementById('email').value
+      let PaymentMethod = document.getElementById('payment-information')
+      let OrderDate = document.getElementById('order_date').value
+      let TicketType = document.getElementById('ticket-type').value
+    
+      // Make an asynchronous call to a server-side function
+      frappe.call({
+        method: 'event.events.user_ticket.ticket',
+        args: {
+          EventName , Date , vanue , Section , Quantity , username , Mobile , Email , PaymentMethod , OrderDate  , TicketType 
+        },
+        callback: function (r) {
+          // Handle the response here
+          if (r.message) {
+            // You can do something with the response data if needed
+            console.log(r.message);
+          }
+        },
+        error: function (err) {
+          // Handle errors here
+          console.error(err);
+        }
+      });
+    }
+  </script>
 
   {% endblock %}

@@ -9,7 +9,11 @@
  "field_order": [
   "standard_access",
   "pro_access",
-  "premium_access"
+  "premium_access",
+  "column_break_slvro",
+  "total_tickets",
+  "sold_tickets",
+  "remaining_tickets"
  ],
  "fields": [
   {
@@ -26,12 +30,31 @@
    "fieldname": "premium_access",
    "fieldtype": "Float",
    "label": "Premium Access"
+  },
+  {
+   "fieldname": "column_break_slvro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_tickets",
+   "fieldtype": "Int",
+   "label": "Total Tickets"
+  },
+  {
+   "fieldname": "sold_tickets",
+   "fieldtype": "Int",
+   "label": "Sold Tickets"
+  },
+  {
+   "fieldname": "remaining_tickets",
+   "fieldtype": "Int",
+   "label": "Remaining Tickets"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-09-25 15:17:17.641747",
+ "modified": "2023-09-27 22:52:39.376433",
  "modified_by": "Administrator",
  "module": "EMS",
  "name": "Ticket",

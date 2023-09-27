@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Ticket', {
-	// refresh: function(frm) {
-
-	// }
+	validate: function(frm) {
+		frm.set_value("remaining_tickets", frm.doc.total_tickets - "" - frm.doc.sold_tickets)
+	}
 });
