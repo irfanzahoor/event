@@ -279,7 +279,7 @@ h6 {
   display: block;
   position: absolute;
   left: 12px;
-  top: calc(100% + 30px);
+  top: calc(100% + 0px);
   margin: 0;
   z-index: 99;
   opacity: 0;
@@ -1442,7 +1442,7 @@ h6 {
   padding: 12px 15px;
 }
 
-#contact .php-email-form button[type=submit] {
+#contact .php-email-form button[type=button] {
   background: #f82249;
   border: 0;
   padding: 10px 40px;
@@ -1452,7 +1452,7 @@ h6 {
   cursor: pointer;
 }
 
-#contact .php-email-form button[type=submit]:hover {
+#contact .php-email-form button[type=button]:hover {
   background: #e0072f;
 }
 
@@ -1594,7 +1594,7 @@ h6 {
   width: 65%;
 }
 
-#footer .footer-top .footer-newsletter input[type=submit] {
+#footer .footer-top .footer-newsletter input[type=button] {
   background: #f82249;
   border: 0;
   width: 35%;
@@ -1605,7 +1605,7 @@ h6 {
   cursor: pointer;
 }
 
-#footer .footer-top .footer-newsletter input[type=submit]:hover {
+#footer .footer-top .footer-newsletter input[type=button]:hover {
   background: #e0072f;
 }
 
